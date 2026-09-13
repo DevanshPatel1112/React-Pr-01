@@ -1,6 +1,6 @@
-import { useState } from 'react';
+﻿import { useState } from 'react';
 
-const image = (name) => `/assets/Images/${name}`;
+const image = (name) => `${import.meta.env.BASE_URL}assets/Images/${name}`;
 
 const services = [
   { icon: 'icon_104.svg', label: 'Home Loan', tone: 'soft' },
@@ -142,7 +142,7 @@ function WhyChoose() {
 }
 
 function Feedback() {
-  return <section className="feedback-section section-space"><div className="container"><h2>Client Feedback</h2><div id="feedbackCarousel" className="carousel slide" data-bs-ride="carousel"><div className="carousel-inner">{[0, 1, 2, 3].map((slide) => <div className={`carousel-item ${slide === 0 ? 'active' : ''}`} key={slide}><div className="feedback-grid">{['img_54.jpg', 'img_55.jpg', 'img_54.jpg'].map((avatar, item) => <article className="feedback-card" key={`${slide}-${item}`}><h3>Very Solid!!</h3><div className="stars">★★★★★</div><p>They not only understand what I say but read between the lines and also give me ideas of my own.</p><strong>Rashed Kabir, <span>California</span></strong><img className="feedback-avatar" src={image(avatar)} alt="Rashed Kabir" /><i className="bi bi-quote quote-mark" /></article>)}</div></div>)}</div><div className="carousel-indicators"><button type="button" data-bs-target="#feedbackCarousel" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1" /><button type="button" data-bs-target="#feedbackCarousel" data-bs-slide-to="1" aria-label="Slide 2" /><button type="button" data-bs-target="#feedbackCarousel" data-bs-slide-to="2" aria-label="Slide 3" /><button type="button" data-bs-target="#feedbackCarousel" data-bs-slide-to="3" aria-label="Slide 4" /></div></div></div></section>;
+  return <section className="feedback-section section-space"><div className="container"><h2>Client Feedback</h2><div id="feedbackCarousel" className="carousel slide" data-bs-ride="carousel"><div className="carousel-inner">{[0, 1, 2, 3].map((slide) => <div className={`carousel-item ${slide === 0 ? 'active' : ''}`} key={slide}><div className="feedback-grid">{['img_54.jpg', 'img_55.jpg', 'img_54.jpg'].map((avatar, item) => <article className="feedback-card" key={`${slide}-${item}`}><h3>Very Solid!!</h3><div className="stars">â˜…â˜…â˜…â˜…â˜…</div><p>They not only understand what I say but read between the lines and also give me ideas of my own.</p><strong>Rashed Kabir, <span>California</span></strong><img className="feedback-avatar" src={image(avatar)} alt="Rashed Kabir" /><i className="bi bi-quote quote-mark" /></article>)}</div></div>)}</div><div className="carousel-indicators"><button type="button" data-bs-target="#feedbackCarousel" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1" /><button type="button" data-bs-target="#feedbackCarousel" data-bs-slide-to="1" aria-label="Slide 2" /><button type="button" data-bs-target="#feedbackCarousel" data-bs-slide-to="2" aria-label="Slide 3" /><button type="button" data-bs-target="#feedbackCarousel" data-bs-slide-to="3" aria-label="Slide 4" /></div></div></div></section>;
 }
 
 function MobileApp() {
@@ -150,7 +150,7 @@ function MobileApp() {
 }
 
 function Contact() {
-  return <section className="contact-section section-space" id="contact"><div className="form-callout" aria-hidden="true"><span>Fill the<br />form</span><img src={image('shape_140.svg')} alt="" /></div><div className="container contact-card"><form><input type="text" placeholder="Your name*" aria-label="Your name" /><input type="email" placeholder="Email*" aria-label="Email" /><textarea placeholder="Your message*" aria-label="Your message" /><button className="primary-button" type="button">SEND MESSAGE</button><p>Been here before? <strong>Check your query</strong></p></form><div className="contact-copy"><i className="bi bi-headset" /><h2>Let’s talk with<br />experience<br />advisors.</h2><p>eiusmod tempor incididunt. Ut enim minim veniam,<br />quis nostrud elit lorem dolor.</p></div></div></section>;
+  return <section className="contact-section section-space" id="contact"><div className="form-callout" aria-hidden="true"><span>Fill the<br />form</span><img src={image('shape_140.svg')} alt="" /></div><div className="container contact-card"><form><input type="text" placeholder="Your name*" aria-label="Your name" /><input type="email" placeholder="Email*" aria-label="Email" /><textarea placeholder="Your message*" aria-label="Your message" /><button className="primary-button" type="button">SEND MESSAGE</button><p>Been here before? <strong>Check your query</strong></p></form><div className="contact-copy"><i className="bi bi-headset" /><h2>Letâ€™s talk with<br />experience<br />advisors.</h2><p>eiusmod tempor incididunt. Ut enim minim veniam,<br />quis nostrud elit lorem dolor.</p></div></div></section>;
 }
 
 function Blog() {
@@ -158,9 +158,11 @@ function Blog() {
 }
 
 function Footer() {
-  return <footer className="site-footer"><img className="footer-decoration footer-decoration-left" src={image('ils_14.png')} alt="" /><img className="footer-decoration footer-decoration-right" src={image('ils_13.png')} alt="" /><div className="container footer-grid"><div><a className="brand footer-brand" href="#top">Jano.</a><p>Best Insurance Company.</p><small>© 2026 - 2027 jano inc.</small></div><div><h3>Links</h3><a href="#top">Home</a><a href="#services">Pricing</a><a href="#top">About us</a><a href="#contact">Careers</a><a href="#services">Features</a><a href="#blog">Blog</a></div><div><h3>Services</h3><a href="#services">Health Insurance Plans</a><a href="#services">Car Insurance</a><a href="#services">Investment</a><a href="#services">Mediclaiam Policy</a><a href="#services">Others</a><a href="#services">Health Insurance</a></div><div><h3>Address</h3><p>2190 Zinai terrace, Lake view<br />house state, 10 no road.</p><div className="socials"><a href="#top"><i className="bi bi-facebook" /></a><a href="#top"><i className="bi bi-twitter" /></a><a href="#top"><i className="bi bi-linkedin" /></a></div></div></div></footer>;
+  return <footer className="site-footer"><img className="footer-decoration footer-decoration-left" src={image('ils_14.png')} alt="" /><img className="footer-decoration footer-decoration-right" src={image('ils_13.png')} alt="" /><div className="container footer-grid"><div><a className="brand footer-brand" href="#top">Jano.</a><p>Best Insurance Company.</p><small>Â© 2026 - 2027 jano inc.</small></div><div><h3>Links</h3><a href="#top">Home</a><a href="#services">Pricing</a><a href="#top">About us</a><a href="#contact">Careers</a><a href="#services">Features</a><a href="#blog">Blog</a></div><div><h3>Services</h3><a href="#services">Health Insurance Plans</a><a href="#services">Car Insurance</a><a href="#services">Investment</a><a href="#services">Mediclaiam Policy</a><a href="#services">Others</a><a href="#services">Health Insurance</a></div><div><h3>Address</h3><p>2190 Zinai terrace, Lake view<br />house state, 10 no road.</p><div className="socials"><a href="#top"><i className="bi bi-facebook" /></a><a href="#top"><i className="bi bi-twitter" /></a><a href="#top"><i className="bi bi-linkedin" /></a></div></div></div></footer>;
 }
 
 export default function App() {
   return <><Header /><main><Hero /><FeatureCards /><Story /><Services /><WhyChoose /><Feedback /><MobileApp /><Contact /><Blog /></main><Footer /><a className="back-to-top" href="#top" aria-label="Back to top"><i className="bi bi-arrow-up" /></a></>;
 }
+
+
